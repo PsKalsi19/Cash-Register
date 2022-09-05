@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <title>Cash Registery</title>
+  </head>
+  <body>
+    <div class="container">
+      <h2>
+        <strong class="heading">Cash Registery</strong>
+      </h2>
+      <p class="sub-heading">
+        To determine how many notes should be returned, please enter the bill
+        amount and cash from the customer.
+      </p>
+
+      <div class="input" id="form-data">
+        <div class="bill-data">
+          <label for="bill-amount"></label>
+          <input name="bill-amount" min="0" type="number" />
+        </div>
+        <div class="cash-data">
+          <label for="cash-received"></label>
+          <input name="cash-received" min="0" type="number" />
+        </div>
+      </div>
+
+        <div class="error-message">
+            <p id="error"></p>
+        </div>
+      <div class="processing">
+        <button id="process-button">Process</button>
+      </div>
+      <div class="output">
+        <p class="output-details">Here is your Result.</p>
+      </div>
+    </div>
+  </body>
+</html>
