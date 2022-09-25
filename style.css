@@ -112,7 +112,10 @@ hr {
 /* For button alignment */
 
 .button-wrapper {
- text-align: center;
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: center;
 }
 
 /* For Lists */
@@ -172,12 +175,12 @@ tr {
 }
 
 /* For table alignment */
-/* .output-container {
+.output-container {
   display: flex;
   flex-direction: row;
   align-items: center;
   justify-content: center;
-} */
+}
 /* for footer */
 
 .footer {
