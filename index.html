@@ -4,39 +4,89 @@
     <meta charset="UTF-8" />
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     <title>Cash Registery</title>
-    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="style.css" />
   </head>
   <body>
-    <div class="container">
-      <h2>
-        <strong class="heading">Cash Registery</strong>
-      </h2>
-      <p class="sub-heading">
+    <nav class="navigation container">
+      <span class="nav-brand"> I'm Prabhjot </span>
+      <ul class="list-non-bullet nav-pills">
+        <li class="list-item-inline">
+          <a class="link" href="https://prabhjot-neog-portfolio.netlify.app/"
+            >Portfolio</a
+          >
+        </li>
+        <li class="list-item-inline">
+          <a class="link" href="https://github.com/PsKalsi19/Banana-Speaks-JS"
+            >View Code</a
+          >
+        </li>
+      </ul>
+    </nav>
+    <header class="hero">
+      <h1 class="hero-heading hero-heading-highlight">Cash Registery</h1>
+      <h3 class="hero-subheading">
         To determine how many notes should be returned, please enter the bill
         amount and cash from the customer.
-      </p>
+      </h3>
+    </header>
 
-      <div class="input" id="form-data">
-        <div class="bill-data">
-          <div class="label-div"><label for="bill-amount"> Amount:</label></div>
-          <input class="input-fields" id="bill-amount" name="bill-amount" min="0" type="number" />
+    <div class="container container-center">
+        <div class="bill-wrapper">
+          <div class="label-div">
+            <label class="label" for="bill-amount"> Amount:</label>
+          </div>
+          <input class="input-field" id="bill-amount" min="0" type="number" />
         </div>
-        <div class="cash-data">
-          <div class="label-div"><label for="cash-received"> Cash Received:</label></div>
-          <input class="input-fields" id="cash-received" name="cash-received" min="0" type="number" />
+        <div class="cash-wrapper">
+          <div class="label-div">
+            <label class="label" for="cash-received"> Cash Received:</label>
+          </div>
+          <input class="input-field" id="cash-received" min="0" type="number" />
         </div>
+        <div id="error" class="section-error"></div>
+    
+      <div class="button-wrapper">
+        <button id="process-button" class="btn btn-primary">Process</button>
       </div>
-
-        <div class="error-message">
-            <p id="error"></p>
-        </div>
-      <div class="processing">
-        <button id="process-button">Process</button>
-      </div>
-      <div class="output">
-        <p class="output-details">Here is your Result:</p>
+      <div class="output-container container">
+        <section class="section">
+          <div class="caption">
+            <caption class="caption">
+              Your result will be shown below 👇
+            </caption>
+          </div>
+          <section id="status" class=" section-status"></section>
+          <table>
+            <tr id="notes-amount-bills">
+              <th>No. of Notes</th>
+            </tr>
+            <tr id="notes-headings">
+              <th>Notes</th>
+            </tr>
+        
+          </table>
+        </section>
       </div>
     </div>
     <script src="/script.js"></script>
+
+    <footer class="footer">
+      <p class="footer-header">We can connect on:</p>
+      <ul class="social-links list-non-bullet">
+        <li class="list-item-inline">
+          <a class="link" href="https://github.com/PsKalsi19">Github</a>
+        </li>
+        <li class="list-item-inline">
+          <a
+            class="link"
+            href="https://www.linkedin.com/in/prabhjot-kalsi-8390a6240/"
+            >Linkedin</a
+          >
+        </li>
+        <li class="list-item-inline">
+          <a class="link" href="https://twitter.com/kalamaurcode">Twitter</a>
+        </li>
+      </ul>
+    </footer>
   </body>
 </html>
