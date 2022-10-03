@@ -14,3 +14,4 @@ Used Javascript to build logic around how a cash register app can be created wit
 
 > Experiments
 - Filled table data dynamically, just for practice.
+- Also showing the total amount of notes.
