@@ -32,7 +32,7 @@ function verifyBillAmount() {
     cashReceivedContainer.style.display = 'none'; //For bonus question
     return true
   }
-  else if (Number(billAmount.value) === 0) {
+  else if (Number(billAmount.value) <= 0) {
     displayError('Entered bill amount should be greater than 0');
     return true
   }
