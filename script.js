@@ -50,13 +50,13 @@ function process() {
   }
   else {
     const amountToReturn = Number(cashReceived.value) - Number(billAmount.value);
-      calculateAmount(amountToReturn)
+    calculateAmount(amountToReturn)
   }
 }
 
 function verifyCashReceived() {
   if (Number(cashReceived.value) < Number(billAmount.value)) {
-    displayError('Please Udhari na maange, hamne khud loan liya hua hai.')
+    displayError('Provided cash should be equal or greater than bill amount.')
     return true;
   }
   else {
@@ -68,14 +68,17 @@ function verifyCashReceived() {
 
 function calculateAmount(amountToReturn) {
   let noOfNotes = 0
-  let totalNumberOfNotes=0
+  const amount=amountToReturn;
+  let totalNumberOfNotes = 0
   for (let i = 0; i < notes.length; i++) {
     noOfNotes = Math.trunc(amountToReturn / notes[i]);
     document.getElementById(notes[i]).innerText = noOfNotes;
-    totalNumberOfNotes=totalNumberOfNotes+noOfNotes;
+    totalNumberOfNotes = totalNumberOfNotes + noOfNotes;
     amountToReturn = amountToReturn % notes[i];
   }
-  displayInfo(`Total number of notes to return: ${totalNumberOfNotes}`)
+  amount === 0 ?
+    displayInfo(`Thanks for providing the money, have a good day. 🤗`) :
+    displayInfo(`Total number of notes to return: ${totalNumberOfNotes}`)
 }
 
 
